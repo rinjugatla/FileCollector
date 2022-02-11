@@ -176,6 +176,7 @@ namespace WindowsFormsApplication3
 
             string fixedSaveDirectory = saveDirectory;
             if (!saveDirectory.EndsWith("\\")) { fixedSaveDirectory = saveDirectory + "\\"; }
+            if (!Directory.Exists(fixedSaveDirectory)) { Directory.CreateDirectory(fixedSaveDirectory) };
 
             using (var request = new HttpRequestMessage(HttpMethod.Get, new Uri(url)))
             using (var response = await httpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead))
