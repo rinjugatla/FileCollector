@@ -35,8 +35,6 @@ namespace WindowsFormsApplication3
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Url_TextBox = new System.Windows.Forms.TextBox();
-            this.Start_TextBox = new System.Windows.Forms.TextBox();
-            this.End_TextBox = new System.Windows.Forms.TextBox();
             this.Clear_Button = new System.Windows.Forms.Button();
             this.GenerateUrl_Button = new System.Windows.Forms.Button();
             this.Download_Button = new System.Windows.Forms.Button();
@@ -56,12 +54,16 @@ namespace WindowsFormsApplication3
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SaveLog_CheckBox = new System.Windows.Forms.CheckBox();
             this.Extension_ComboBox = new System.Windows.Forms.ComboBox();
+            this.Start_NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.End_NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 19);
+            this.label1.Location = new System.Drawing.Point(11, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 12);
             this.label1.TabIndex = 0;
@@ -71,7 +73,7 @@ namespace WindowsFormsApplication3
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 44);
+            this.label2.Location = new System.Drawing.Point(11, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 1;
@@ -80,7 +82,7 @@ namespace WindowsFormsApplication3
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 67);
+            this.label3.Location = new System.Drawing.Point(11, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 2;
@@ -94,25 +96,6 @@ namespace WindowsFormsApplication3
             this.Url_TextBox.Name = "Url_TextBox";
             this.Url_TextBox.Size = new System.Drawing.Size(185, 19);
             this.Url_TextBox.TabIndex = 1;
-            this.Url_TextBox.TextChanged += new System.EventHandler(this.textBoxURL_TextChanged);
-            // 
-            // Start_TextBox
-            // 
-            this.Start_TextBox.Location = new System.Drawing.Point(61, 37);
-            this.Start_TextBox.Name = "Start_TextBox";
-            this.Start_TextBox.Size = new System.Drawing.Size(185, 19);
-            this.Start_TextBox.TabIndex = 2;
-            this.Start_TextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.Start_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            // 
-            // End_TextBox
-            // 
-            this.End_TextBox.Location = new System.Drawing.Point(61, 62);
-            this.End_TextBox.Name = "End_TextBox";
-            this.End_TextBox.Size = new System.Drawing.Size(185, 19);
-            this.End_TextBox.TabIndex = 3;
-            this.End_TextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.End_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // Clear_Button
             // 
@@ -180,7 +163,6 @@ namespace WindowsFormsApplication3
             this.SaveDirectory_TextBox.Name = "SaveDirectory_TextBox";
             this.SaveDirectory_TextBox.Size = new System.Drawing.Size(300, 19);
             this.SaveDirectory_TextBox.TabIndex = 14;
-            this.SaveDirectory_TextBox.TextChanged += new System.EventHandler(this.textBoxExport_TextChanged);
             // 
             // folderBrowserDialog1
             // 
@@ -211,7 +193,6 @@ namespace WindowsFormsApplication3
             this.UrlFilePath_TextBox.Name = "UrlFilePath_TextBox";
             this.UrlFilePath_TextBox.Size = new System.Drawing.Size(300, 19);
             this.UrlFilePath_TextBox.TabIndex = 11;
-            this.UrlFilePath_TextBox.TextChanged += new System.EventHandler(this.textBoxURLlistF_TextChanged);
             // 
             // UrlFileBrowse_Button
             // 
@@ -237,7 +218,6 @@ namespace WindowsFormsApplication3
             this.SaveByExtension_CheckBox.TabIndex = 9;
             this.SaveByExtension_CheckBox.Text = "拡張子別に保存";
             this.SaveByExtension_CheckBox.UseVisualStyleBackColor = true;
-            this.SaveByExtension_CheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // OpenSaveDirectory_Button
             // 
@@ -285,12 +265,28 @@ namespace WindowsFormsApplication3
             this.Extension_ComboBox.TabStop = false;
             this.Extension_ComboBox.Text = "保存拡張子(実装予定)";
             // 
+            // Start_NumericUpDown
+            // 
+            this.Start_NumericUpDown.Location = new System.Drawing.Point(61, 37);
+            this.Start_NumericUpDown.Name = "Start_NumericUpDown";
+            this.Start_NumericUpDown.Size = new System.Drawing.Size(185, 19);
+            this.Start_NumericUpDown.TabIndex = 101;
+            // 
+            // End_NumericUpDown
+            // 
+            this.End_NumericUpDown.Location = new System.Drawing.Point(61, 62);
+            this.End_NumericUpDown.Name = "End_NumericUpDown";
+            this.End_NumericUpDown.Size = new System.Drawing.Size(185, 19);
+            this.End_NumericUpDown.TabIndex = 101;
+            // 
             // fomr1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 314);
+            this.Controls.Add(this.End_NumericUpDown);
+            this.Controls.Add(this.Start_NumericUpDown);
             this.Controls.Add(this.Extension_ComboBox);
             this.Controls.Add(this.SaveLog_CheckBox);
             this.Controls.Add(this.OpenUrlFile_Button);
@@ -307,8 +303,6 @@ namespace WindowsFormsApplication3
             this.Controls.Add(this.Download_Button);
             this.Controls.Add(this.GenerateUrl_Button);
             this.Controls.Add(this.Clear_Button);
-            this.Controls.Add(this.End_TextBox);
-            this.Controls.Add(this.Start_TextBox);
             this.Controls.Add(this.Url_TextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -317,6 +311,8 @@ namespace WindowsFormsApplication3
             this.Name = "fomr1";
             this.Text = "役立たずの画像収集機 ver.1.10";
             this.Load += new System.EventHandler(this.fomr1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,8 +324,6 @@ namespace WindowsFormsApplication3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Url_TextBox;
-        private System.Windows.Forms.TextBox Start_TextBox;
-        private System.Windows.Forms.TextBox End_TextBox;
         private System.Windows.Forms.Button Clear_Button;
         private System.Windows.Forms.Button GenerateUrl_Button;
         private System.Windows.Forms.Button Download_Button;
@@ -349,6 +343,8 @@ namespace WindowsFormsApplication3
         private Timer timer1;
         private CheckBox SaveLog_CheckBox;
         private ComboBox Extension_ComboBox;
+        private NumericUpDown Start_NumericUpDown;
+        private NumericUpDown End_NumericUpDown;
     }
 }
 

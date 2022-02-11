@@ -29,15 +29,15 @@ namespace WindowsFormsApplication3
         private void button1_Click(object sender, EventArgs e)
         {
             Url_TextBox.Text = "";
-            Start_TextBox.Text = "";
-            End_TextBox.Text = "";
+            Start_NumericUpDown.Text = "0";
+            End_NumericUpDown.Text = "0";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
 
 
-            if ((Url_TextBox.Text.Length != 0) || (Start_TextBox.Text.Length != 0) || (Url_TextBox.Text.Length != 0))
+            if ((Url_TextBox.Text.Length != 0) || (Start_NumericUpDown.Text.Length != 0) || (Url_TextBox.Text.Length != 0))
             {
 
                 int n;
@@ -48,10 +48,10 @@ namespace WindowsFormsApplication3
                 false,
                 System.Text.Encoding.GetEncoding(932));
 
-                if (int.Parse(Start_TextBox.Text) < int.Parse(End_TextBox.Text))
+                if (int.Parse(Start_NumericUpDown.Text) < int.Parse(End_NumericUpDown.Text))
                 {
 
-                    for (n = int.Parse(Start_TextBox.Text); n <= int.Parse(End_TextBox.Text); n++)
+                    for (n = int.Parse(Start_NumericUpDown.Text); n <= int.Parse(End_NumericUpDown.Text); n++)
                     {
 
                         //ファイルに書き出し
@@ -75,32 +75,6 @@ namespace WindowsFormsApplication3
             {
 
                 MessageBox.Show("URL, 開始値, 終了値を確認してください。", "エラー");
-
-            }
-
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if ((ch < '0' || ch > '9') && (ch != '\b'))
-            {
-
-                e.Handled = true;      //入力取消し
-
-            }
-
-        }
-
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if ((ch < '0' || ch > '9') && (ch != '\b'))
-            {
-
-                e.Handled = true;      //入力取消し
 
             }
 
@@ -465,36 +439,6 @@ namespace WindowsFormsApplication3
                 System.Diagnostics.Process.Start(SaveDirectory_TextBox.Text);
 
             }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxURL_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxURLlistF_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxExport_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
