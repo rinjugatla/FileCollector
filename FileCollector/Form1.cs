@@ -113,24 +113,9 @@ namespace WindowsFormsApplication3
             CheckGenerateUrl_Button.Enabled = false;
             Download_Button.Enabled = false;
             SaveDirectoryBrowse_Button.Enabled = false;
-            UrlFileBrowse_Button.Enabled = false;
-            OpenUrlFile_Button.Enabled = false;
             OpenSaveDirectory_Button.Enabled = false;
 
             string URLlistFile = "";
-
-            if (UrlFilePath_TextBox.Text == "")
-            {
-
-                URLlistFile = "URL-list.txt";
-
-            }
-            else
-            {
-
-                URLlistFile = UrlFilePath_TextBox.Text;
-
-            }
 
             //開始時刻を取得
             //現在の時刻を取得
@@ -383,8 +368,6 @@ namespace WindowsFormsApplication3
             CheckGenerateUrl_Button.Enabled = true;
             Download_Button.Enabled = true;
             SaveDirectoryBrowse_Button.Enabled = true;
-            UrlFileBrowse_Button.Enabled = true;
-            OpenUrlFile_Button.Enabled = true;
             OpenSaveDirectory_Button.Enabled = true;
 
             return;
@@ -403,42 +386,6 @@ namespace WindowsFormsApplication3
                 //保存先
                 SaveDirectory_TextBox.Text += (folderBrowserDialog1.SelectedPath);
             }
-
-        }
-
-        /// <summary>
-        /// URLファイルの場所を指定
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UrlFileBrowse_Button_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                //URL-list.txtファイルの場所
-                UrlFilePath_TextBox.Text += (openFileDialog1.FileName);
-            }
-
-        }
-
-        /// <summary>
-        /// URLファイルを開く
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OpenUrlFile_Button_Click(object sender, EventArgs e)
-        {
-
-            if (SaveDirectory_TextBox.Text == "")
-            {
-                string startup = Application.StartupPath;
-                System.Diagnostics.Process.Start("Notepad", startup);
-            }
-            else
-            {
-                System.Diagnostics.Process.Start("Notepad", UrlFilePath_TextBox.Text);
-            }
-
 
         }
 

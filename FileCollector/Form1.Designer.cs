@@ -44,13 +44,8 @@ namespace WindowsFormsApplication3
             this.SaveDirectory_TextBox = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SaveDirectoryBrowse_Button = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.UrlFilePath_TextBox = new System.Windows.Forms.TextBox();
-            this.UrlFileBrowse_Button = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SaveByExtension_CheckBox = new System.Windows.Forms.CheckBox();
             this.OpenSaveDirectory_Button = new System.Windows.Forms.Button();
-            this.OpenUrlFile_Button = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SaveLog_CheckBox = new System.Windows.Forms.CheckBox();
             this.Extension_ComboBox = new System.Windows.Forms.ComboBox();
@@ -151,7 +146,7 @@ namespace WindowsFormsApplication3
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 268);
+            this.label6.Location = new System.Drawing.Point(30, 239);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 14;
@@ -159,51 +154,20 @@ namespace WindowsFormsApplication3
             // 
             // SaveDirectory_TextBox
             // 
-            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(125, 265);
+            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(125, 236);
             this.SaveDirectory_TextBox.Name = "SaveDirectory_TextBox";
             this.SaveDirectory_TextBox.Size = new System.Drawing.Size(300, 19);
             this.SaveDirectory_TextBox.TabIndex = 14;
             // 
             // SaveDirectoryBrowse_Button
             // 
-            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(431, 263);
+            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(431, 234);
             this.SaveDirectoryBrowse_Button.Name = "SaveDirectoryBrowse_Button";
             this.SaveDirectoryBrowse_Button.Size = new System.Drawing.Size(53, 21);
             this.SaveDirectoryBrowse_Button.TabIndex = 15;
             this.SaveDirectoryBrowse_Button.Text = "参照";
             this.SaveDirectoryBrowse_Button.UseVisualStyleBackColor = true;
             this.SaveDirectoryBrowse_Button.Click += new System.EventHandler(this.SaveDirectoryBrowse_Button_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 239);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 12);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "URLファイル場所";
-            // 
-            // UrlFilePath_TextBox
-            // 
-            this.UrlFilePath_TextBox.Location = new System.Drawing.Point(125, 236);
-            this.UrlFilePath_TextBox.Name = "UrlFilePath_TextBox";
-            this.UrlFilePath_TextBox.Size = new System.Drawing.Size(300, 19);
-            this.UrlFilePath_TextBox.TabIndex = 11;
-            // 
-            // UrlFileBrowse_Button
-            // 
-            this.UrlFileBrowse_Button.Location = new System.Drawing.Point(431, 235);
-            this.UrlFileBrowse_Button.Name = "UrlFileBrowse_Button";
-            this.UrlFileBrowse_Button.Size = new System.Drawing.Size(53, 21);
-            this.UrlFileBrowse_Button.TabIndex = 12;
-            this.UrlFileBrowse_Button.Text = "参照";
-            this.UrlFileBrowse_Button.UseVisualStyleBackColor = true;
-            this.UrlFileBrowse_Button.Click += new System.EventHandler(this.UrlFileBrowse_Button_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "URL-listファイル|URL-list.txt";
             // 
             // SaveByExtension_CheckBox
             // 
@@ -217,23 +181,13 @@ namespace WindowsFormsApplication3
             // 
             // OpenSaveDirectory_Button
             // 
-            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(490, 263);
+            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(490, 234);
             this.OpenSaveDirectory_Button.Name = "OpenSaveDirectory_Button";
             this.OpenSaveDirectory_Button.Size = new System.Drawing.Size(52, 21);
             this.OpenSaveDirectory_Button.TabIndex = 16;
             this.OpenSaveDirectory_Button.Text = "開く";
             this.OpenSaveDirectory_Button.UseVisualStyleBackColor = true;
             this.OpenSaveDirectory_Button.Click += new System.EventHandler(this.OpenSaveDirectory_Button_Click);
-            // 
-            // OpenUrlFile_Button
-            // 
-            this.OpenUrlFile_Button.Location = new System.Drawing.Point(490, 235);
-            this.OpenUrlFile_Button.Name = "OpenUrlFile_Button";
-            this.OpenUrlFile_Button.Size = new System.Drawing.Size(52, 20);
-            this.OpenUrlFile_Button.TabIndex = 13;
-            this.OpenUrlFile_Button.Text = "開く";
-            this.OpenUrlFile_Button.UseVisualStyleBackColor = true;
-            this.OpenUrlFile_Button.Click += new System.EventHandler(this.OpenUrlFile_Button_Click);
             // 
             // SaveLog_CheckBox
             // 
@@ -306,18 +260,14 @@ namespace WindowsFormsApplication3
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 294);
+            this.ClientSize = new System.Drawing.Size(555, 267);
             this.Controls.Add(this.Format_TextBox);
             this.Controls.Add(this.End_NumericUpDown);
             this.Controls.Add(this.Start_NumericUpDown);
             this.Controls.Add(this.Extension_ComboBox);
             this.Controls.Add(this.SaveLog_CheckBox);
-            this.Controls.Add(this.OpenUrlFile_Button);
             this.Controls.Add(this.OpenSaveDirectory_Button);
             this.Controls.Add(this.SaveByExtension_CheckBox);
-            this.Controls.Add(this.UrlFileBrowse_Button);
-            this.Controls.Add(this.UrlFilePath_TextBox);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.SaveDirectoryBrowse_Button);
             this.Controls.Add(this.SaveDirectory_TextBox);
             this.Controls.Add(this.label6);
@@ -357,13 +307,8 @@ namespace WindowsFormsApplication3
         private TextBox SaveDirectory_TextBox;
         private FolderBrowserDialog folderBrowserDialog1;
         private Button SaveDirectoryBrowse_Button;
-        private Label label7;
-        private TextBox UrlFilePath_TextBox;
-        private Button UrlFileBrowse_Button;
-        private OpenFileDialog openFileDialog1;
         private CheckBox SaveByExtension_CheckBox;
         private Button OpenSaveDirectory_Button;
-        private Button OpenUrlFile_Button;
         private Timer timer1;
         private CheckBox SaveLog_CheckBox;
         private ComboBox Extension_ComboBox;
