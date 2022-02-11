@@ -91,9 +91,9 @@ namespace WindowsFormsApplication3
             // 
             // Clear_Button
             // 
-            this.Clear_Button.Location = new System.Drawing.Point(144, 155);
+            this.Clear_Button.Location = new System.Drawing.Point(165, 155);
             this.Clear_Button.Name = "Clear_Button";
-            this.Clear_Button.Size = new System.Drawing.Size(102, 37);
+            this.Clear_Button.Size = new System.Drawing.Size(81, 37);
             this.Clear_Button.TabIndex = 4;
             this.Clear_Button.Text = "クリア";
             this.Clear_Button.UseVisualStyleBackColor = true;
@@ -101,9 +101,9 @@ namespace WindowsFormsApplication3
             // 
             // CheckGenerateUrl_Button
             // 
-            this.CheckGenerateUrl_Button.Location = new System.Drawing.Point(33, 112);
+            this.CheckGenerateUrl_Button.Location = new System.Drawing.Point(13, 112);
             this.CheckGenerateUrl_Button.Name = "CheckGenerateUrl_Button";
-            this.CheckGenerateUrl_Button.Size = new System.Drawing.Size(213, 37);
+            this.CheckGenerateUrl_Button.Size = new System.Drawing.Size(233, 37);
             this.CheckGenerateUrl_Button.TabIndex = 6;
             this.CheckGenerateUrl_Button.Text = "連番URLを確認";
             this.CheckGenerateUrl_Button.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@ namespace WindowsFormsApplication3
             // 
             // Download_Button
             // 
-            this.Download_Button.Location = new System.Drawing.Point(33, 155);
+            this.Download_Button.Location = new System.Drawing.Point(13, 155);
             this.Download_Button.Name = "Download_Button";
-            this.Download_Button.Size = new System.Drawing.Size(105, 37);
+            this.Download_Button.Size = new System.Drawing.Size(146, 37);
             this.Download_Button.TabIndex = 7;
             this.Download_Button.Text = "DL";
             this.Download_Button.UseVisualStyleBackColor = true;
@@ -125,15 +125,15 @@ namespace WindowsFormsApplication3
             this.Log_TextBox.Multiline = true;
             this.Log_TextBox.Name = "Log_TextBox";
             this.Log_TextBox.ReadOnly = true;
-            this.Log_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Log_TextBox.Size = new System.Drawing.Size(291, 180);
+            this.Log_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.Log_TextBox.Size = new System.Drawing.Size(400, 180);
             this.Log_TextBox.TabIndex = 9;
             this.Log_TextBox.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 195);
+            this.label4.Location = new System.Drawing.Point(84, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(510, 12);
             this.label4.TabIndex = 10;
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication3
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 239);
+            this.label6.Location = new System.Drawing.Point(70, 239);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 14;
@@ -151,14 +151,14 @@ namespace WindowsFormsApplication3
             // 
             // SaveDirectory_TextBox
             // 
-            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(125, 236);
+            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(165, 236);
             this.SaveDirectory_TextBox.Name = "SaveDirectory_TextBox";
             this.SaveDirectory_TextBox.Size = new System.Drawing.Size(300, 19);
             this.SaveDirectory_TextBox.TabIndex = 14;
             // 
             // SaveDirectoryBrowse_Button
             // 
-            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(431, 234);
+            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(471, 234);
             this.SaveDirectoryBrowse_Button.Name = "SaveDirectoryBrowse_Button";
             this.SaveDirectoryBrowse_Button.Size = new System.Drawing.Size(53, 21);
             this.SaveDirectoryBrowse_Button.TabIndex = 15;
@@ -169,7 +169,7 @@ namespace WindowsFormsApplication3
             // SaveByExtension_CheckBox
             // 
             this.SaveByExtension_CheckBox.AutoSize = true;
-            this.SaveByExtension_CheckBox.Location = new System.Drawing.Point(32, 210);
+            this.SaveByExtension_CheckBox.Location = new System.Drawing.Point(72, 210);
             this.SaveByExtension_CheckBox.Name = "SaveByExtension_CheckBox";
             this.SaveByExtension_CheckBox.Size = new System.Drawing.Size(105, 16);
             this.SaveByExtension_CheckBox.TabIndex = 9;
@@ -178,7 +178,7 @@ namespace WindowsFormsApplication3
             // 
             // OpenSaveDirectory_Button
             // 
-            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(490, 234);
+            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(530, 234);
             this.OpenSaveDirectory_Button.Name = "OpenSaveDirectory_Button";
             this.OpenSaveDirectory_Button.Size = new System.Drawing.Size(52, 21);
             this.OpenSaveDirectory_Button.TabIndex = 16;
@@ -191,7 +191,7 @@ namespace WindowsFormsApplication3
             this.SaveLog_CheckBox.AutoSize = true;
             this.SaveLog_CheckBox.Checked = true;
             this.SaveLog_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SaveLog_CheckBox.Location = new System.Drawing.Point(143, 210);
+            this.SaveLog_CheckBox.Location = new System.Drawing.Point(183, 210);
             this.SaveLog_CheckBox.Name = "SaveLog_CheckBox";
             this.SaveLog_CheckBox.Size = new System.Drawing.Size(63, 16);
             this.SaveLog_CheckBox.TabIndex = 10;
@@ -205,7 +205,7 @@ namespace WindowsFormsApplication3
             "jpeg,jpg,gif,png",
             "wma,mp3,acc",
             "avi,wmv,mp4,divx"});
-            this.Extension_ComboBox.Location = new System.Drawing.Point(212, 208);
+            this.Extension_ComboBox.Location = new System.Drawing.Point(252, 208);
             this.Extension_ComboBox.Name = "Extension_ComboBox";
             this.Extension_ComboBox.Size = new System.Drawing.Size(330, 20);
             this.Extension_ComboBox.TabIndex = 100;
@@ -257,7 +257,7 @@ namespace WindowsFormsApplication3
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 267);
+            this.ClientSize = new System.Drawing.Size(664, 267);
             this.Controls.Add(this.Format_TextBox);
             this.Controls.Add(this.End_NumericUpDown);
             this.Controls.Add(this.Start_NumericUpDown);
