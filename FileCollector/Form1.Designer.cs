@@ -48,10 +48,10 @@ namespace WindowsFormsApplication3
             this.Format_TextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.DownloadDelay_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownloadDelay_NumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -227,24 +227,24 @@ namespace WindowsFormsApplication3
             this.label4.TabIndex = 2;
             this.label4.Text = "待機時間";
             // 
-            // numericUpDown1
+            // DownloadDelay_NumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(72, 112);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.DownloadDelay_NumericUpDown.Location = new System.Drawing.Point(72, 112);
+            this.DownloadDelay_NumericUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.DownloadDelay_NumericUpDown.Minimum = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(174, 19);
-            this.numericUpDown1.TabIndex = 101;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.DownloadDelay_NumericUpDown.Name = "DownloadDelay_NumericUpDown";
+            this.DownloadDelay_NumericUpDown.Size = new System.Drawing.Size(174, 19);
+            this.DownloadDelay_NumericUpDown.TabIndex = 101;
+            this.DownloadDelay_NumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.DownloadDelay_NumericUpDown.Value = new decimal(new int[] {
             500,
             0,
             0,
@@ -257,7 +257,7 @@ namespace WindowsFormsApplication3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 258);
             this.Controls.Add(this.Format_TextBox);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.DownloadDelay_NumericUpDown);
             this.Controls.Add(this.End_NumericUpDown);
             this.Controls.Add(this.Start_NumericUpDown);
             this.Controls.Add(this.OpenSaveDirectory_Button);
@@ -278,10 +278,10 @@ namespace WindowsFormsApplication3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "fomr1";
-            this.Text = "役立たずの画像収集機 ver.1.10";
+            this.Text = "連番ファイルダウンロード ver.1.2.0";
             ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownloadDelay_NumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +307,7 @@ namespace WindowsFormsApplication3
         private TextBox Format_TextBox;
         private Label label5;
         private Label label4;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown DownloadDelay_NumericUpDown;
     }
 }
 
