@@ -80,18 +80,6 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (Clipboard.GetDataObject().
-            GetDataPresent(DataFormats.Text) == true)
-            {
-                //クリップボードにテキストデータがあるときは貼り付ける
-                //（テキストデータの有無を調べなくても問題はない）
-                textBoxURL.Paste();
-            }
-
-        }
-
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -133,17 +121,10 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void LDownload()
         {
 
             button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
             button4.Enabled = false;
             button5.Enabled = false;
             button7.Enabled = false;
@@ -414,8 +395,6 @@ namespace WindowsFormsApplication3
             if (checkBox2.Checked) System.IO.File.AppendAllText("log.txt", "\r\n-----終了-----\r\n" + "\r\n");
 
             button1.Enabled = true;
-            button2.Enabled = true;
-            button3.Enabled = true;
             button4.Enabled = true;
             button5.Enabled = true;
             button7.Enabled = true;
