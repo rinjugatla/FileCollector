@@ -42,7 +42,6 @@ namespace WindowsFormsApplication3
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SaveDirectory_TextBox = new System.Windows.Forms.TextBox();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SaveDirectoryBrowse_Button = new System.Windows.Forms.Button();
             this.SaveByExtension_CheckBox = new System.Windows.Forms.CheckBox();
             this.OpenSaveDirectory_Button = new System.Windows.Forms.Button();
@@ -305,7 +304,6 @@ namespace WindowsFormsApplication3
         private Label label4;
         private Label label6;
         private TextBox SaveDirectory_TextBox;
-        private FolderBrowserDialog folderBrowserDialog1;
         private Button SaveDirectoryBrowse_Button;
         private CheckBox SaveByExtension_CheckBox;
         private Button OpenSaveDirectory_Button;

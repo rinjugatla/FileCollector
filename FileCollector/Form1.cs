@@ -386,12 +386,11 @@ namespace WindowsFormsApplication3
         /// <param name="e"></param>
         private void SaveDirectoryBrowse_Button_Click(object sender, EventArgs e)
         {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            using(var fbd = new FolderBrowserDialog())
             {
-                //保存先
-                SaveDirectory_TextBox.Text += (folderBrowserDialog1.SelectedPath);
+                if (fbd.ShowDialog() != DialogResult.OK) { return; }
+                SaveDirectory_TextBox.Text += (fbd.SelectedPath);
             }
-
         }
 
         /// <summary>
