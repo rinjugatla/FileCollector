@@ -28,16 +28,16 @@ namespace WindowsFormsApplication3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBoxURL.Text = "";
-            textBox1.Text = "";
-            textBox2.Text = "";
+            Url_TextBox.Text = "";
+            Start_TextBox.Text = "";
+            End_TextBox.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
 
 
-            if ((textBoxURL.Text.Length != 0) || (textBox1.Text.Length != 0) || (textBoxURL.Text.Length != 0))
+            if ((Url_TextBox.Text.Length != 0) || (Start_TextBox.Text.Length != 0) || (Url_TextBox.Text.Length != 0))
             {
 
                 int n;
@@ -48,14 +48,14 @@ namespace WindowsFormsApplication3
                 false,
                 System.Text.Encoding.GetEncoding(932));
 
-                if (int.Parse(textBox1.Text) < int.Parse(textBox2.Text))
+                if (int.Parse(Start_TextBox.Text) < int.Parse(End_TextBox.Text))
                 {
 
-                    for (n = int.Parse(textBox1.Text); n <= int.Parse(textBox2.Text); n++)
+                    for (n = int.Parse(Start_TextBox.Text); n <= int.Parse(End_TextBox.Text); n++)
                     {
 
                         //ファイルに書き出し
-                        sw.WriteLine(textBoxURL.Text + n + "/");
+                        sw.WriteLine(Url_TextBox.Text + n + "/");
 
                     }
 
@@ -124,17 +124,17 @@ namespace WindowsFormsApplication3
         public void LDownload()
         {
 
-            button1.Enabled = false;
-            button4.Enabled = false;
-            button5.Enabled = false;
-            button7.Enabled = false;
-            button8.Enabled = false;
-            button9.Enabled = false;
-            button10.Enabled = false;
+            Clear_Button.Enabled = false;
+            GenerateUrl_Button.Enabled = false;
+            Download_Button.Enabled = false;
+            SaveDirectoryBrowse_Button.Enabled = false;
+            UrlFileBrowse_Button.Enabled = false;
+            OpenUrlFile_Button.Enabled = false;
+            OpenSaveDirectory_Button.Enabled = false;
 
             string URLlistFile = "";
 
-            if (textBoxURLlistF.Text == "")
+            if (UrlFilePath_TextBox.Text == "")
             {
 
                 URLlistFile = "URL-list.txt";
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication3
             else
             {
 
-                URLlistFile = textBoxURLlistF.Text;
+                URLlistFile = UrlFilePath_TextBox.Text;
 
             }
 
@@ -163,9 +163,9 @@ namespace WindowsFormsApplication3
                 {
 
                     //textBox3.Textの初期化+logの書き出し
-                    textBox3.Text = "";
-                    textBox3.Text += ("-----読み込んだURL:" + A + "-----\r\n\r\n");
-                    if (checkBox2.Checked) System.IO.File.AppendAllText("log.txt", "-----読み込んだURL:" + A + "-----\r\n");
+                    Log_TextBox.Text = "";
+                    Log_TextBox.Text += ("-----読み込んだURL:" + A + "-----\r\n\r\n");
+                    if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "-----読み込んだURL:" + A + "-----\r\n");
 
                     // 相対アドレス指定で使うベースアドレス
                     string baseurl = "";
@@ -186,7 +186,7 @@ namespace WindowsFormsApplication3
                     if (!A.ToLower().StartsWith("http://"))
                     {
                         // 引数が「http://」で始まっていない場合
-                        textBox3.Text += ("URLは「http://」で始まっている必要があります");
+                        Log_TextBox.Text += ("URLは「http://」で始まっている必要があります");
                         return;
 
                     }
@@ -195,7 +195,7 @@ namespace WindowsFormsApplication3
                         if ((A.ToLower().StartsWith("http://")) && (A.Length == 7))
                         {
                             // 引数が「http://」しかない場合
-                            textBox3.Text += ("URLが不正です");
+                            Log_TextBox.Text += ("URLが不正です");
                             return;
                         }
                     }
@@ -250,9 +250,9 @@ namespace WindowsFormsApplication3
                                 || val.ToLower().EndsWith(".mp3") || val.ToLower().EndsWith(".acc"))
                             {
 
-                                textBox3.Text += ("Downloading " + val + " ... ");
+                                Log_TextBox.Text += ("Downloading " + val + " ... ");
                                 //textBox3.Text += ("Downloading " + baseurl + " ... ");
-                                if (checkBox2.Checked) System.IO.File.AppendAllText("log.txt", "Downloading " + val + " ... ");
+                                if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "Downloading " + val + " ... ");
 
                                 // ローカルディスクに保存するときの名前を作成
                                 string lcfile = val;
@@ -289,10 +289,10 @@ namespace WindowsFormsApplication3
 
                                 string Dpath = "";
 
-                                if (checkBox1.Checked)
+                                if (SaveByExtension_CheckBox.Checked)
                                 {
 
-                                    if (textBoxExport.Text == "")
+                                    if (SaveDirectory_TextBox.Text == "")
                                     {
 
                                         //ディレクトリ作成
@@ -307,10 +307,10 @@ namespace WindowsFormsApplication3
                                     {
 
                                         //ディレクトリ作成
-                                        System.IO.Directory.CreateDirectory(textBoxExport.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2] + "\\" + valKAKU);
+                                        System.IO.Directory.CreateDirectory(SaveDirectory_TextBox.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2] + "\\" + valKAKU);
 
                                         //ディレクトリパス設定
-                                        Dpath = textBoxExport.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2] + "\\" + valKAKU + "\\";
+                                        Dpath = SaveDirectory_TextBox.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2] + "\\" + valKAKU + "\\";
 
 
                                     }
@@ -322,7 +322,7 @@ namespace WindowsFormsApplication3
                                 else
                                 {
 
-                                    if (textBoxExport.Text == "")
+                                    if (SaveDirectory_TextBox.Text == "")
                                     {
 
                                         //ディレクトリ作成
@@ -337,10 +337,10 @@ namespace WindowsFormsApplication3
                                     {
 
                                         //ディレクトリ作成
-                                        System.IO.Directory.CreateDirectory(textBoxExport.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2]);
+                                        System.IO.Directory.CreateDirectory(SaveDirectory_TextBox.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2]);
 
                                         //ディレクトリパス設定
-                                        Dpath = textBoxExport.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2] + "\\";
+                                        Dpath = SaveDirectory_TextBox.Text + "\\" + stArrayData[2] + "\\" + stArrayData[int.Parse(n) - 2] + "\\";
 
 
                                     }
@@ -351,15 +351,15 @@ namespace WindowsFormsApplication3
                                 }
 
                                 //textBox3.Text += ("OK\r\n");
-                                textBox3.AppendText("OK\r\n");
-                                if (checkBox2.Checked) System.IO.File.AppendAllText("log.txt", "OK\r\n");
+                                Log_TextBox.AppendText("OK\r\n");
+                                if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "OK\r\n");
 
 
                             }
 
                         }
 
-                        textBox3.Text += ("\r\n-----終了-----\r\n");
+                        Log_TextBox.Text += ("\r\n-----終了-----\r\n");
 
                     }
                     catch (Exception c)
@@ -374,8 +374,8 @@ namespace WindowsFormsApplication3
             else
             {
                 //ファイルが存在しない場合の処理
-                textBox3.Text = "";
-                textBox3.Text += ("URL-list.txtが見つかりません");
+                Log_TextBox.Text = "";
+                Log_TextBox.Text += ("URL-list.txtが見つかりません");
 
             }
 
@@ -389,18 +389,18 @@ namespace WindowsFormsApplication3
 
             int TotaltimeSecond = (Totaltime % 60000) / 1000;
             int TotaltimeMin = Totaltime / 60000;
-            if (checkBox2.Checked) System.IO.File.AppendAllText("log.txt", "\r\n-----情報-----\r\n");
-            if (checkBox2.Checked) System.IO.File.AppendAllText("log.txt", "開始時刻" + Sterttime.ToLongTimeString() + "\r\n" + "終了時刻" + Endtime.ToLongTimeString() +
+            if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "\r\n-----情報-----\r\n");
+            if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "開始時刻" + Sterttime.ToLongTimeString() + "\r\n" + "終了時刻" + Endtime.ToLongTimeString() +
                 "\r\n" + "DL時間" + TotaltimeMin.ToString() + "分" + TotaltimeSecond.ToString() + "秒");
-            if (checkBox2.Checked) System.IO.File.AppendAllText("log.txt", "\r\n-----終了-----\r\n" + "\r\n");
+            if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "\r\n-----終了-----\r\n" + "\r\n");
 
-            button1.Enabled = true;
-            button4.Enabled = true;
-            button5.Enabled = true;
-            button7.Enabled = true;
-            button8.Enabled = true;
-            button9.Enabled = true;
-            button10.Enabled = true;
+            Clear_Button.Enabled = true;
+            GenerateUrl_Button.Enabled = true;
+            Download_Button.Enabled = true;
+            SaveDirectoryBrowse_Button.Enabled = true;
+            UrlFileBrowse_Button.Enabled = true;
+            OpenUrlFile_Button.Enabled = true;
+            OpenSaveDirectory_Button.Enabled = true;
 
             return;
 
@@ -416,7 +416,7 @@ namespace WindowsFormsApplication3
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 //保存先
-                textBoxExport.Text += (folderBrowserDialog1.SelectedPath);
+                SaveDirectory_TextBox.Text += (folderBrowserDialog1.SelectedPath);
             }
 
         }
@@ -426,7 +426,7 @@ namespace WindowsFormsApplication3
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 //URL-list.txtファイルの場所
-                textBoxURLlistF.Text += (openFileDialog1.FileName);
+                UrlFilePath_TextBox.Text += (openFileDialog1.FileName);
             }
 
         }
@@ -439,14 +439,14 @@ namespace WindowsFormsApplication3
         private void button9_Click(object sender, EventArgs e)
         {
 
-            if (textBoxExport.Text == "")
+            if (SaveDirectory_TextBox.Text == "")
             {
                 string startup = Application.StartupPath;
                 System.Diagnostics.Process.Start("Notepad", startup);
             }
             else
             {
-                System.Diagnostics.Process.Start("Notepad", textBoxURLlistF.Text);
+                System.Diagnostics.Process.Start("Notepad", UrlFilePath_TextBox.Text);
             }
 
 
@@ -454,7 +454,7 @@ namespace WindowsFormsApplication3
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (textBoxExport.Text == "")
+            if (SaveDirectory_TextBox.Text == "")
             {
                 string startup = Application.StartupPath;
                 System.Diagnostics.Process.Start(startup);
@@ -462,7 +462,7 @@ namespace WindowsFormsApplication3
             else
             {
 
-                System.Diagnostics.Process.Start(textBoxExport.Text);
+                System.Diagnostics.Process.Start(SaveDirectory_TextBox.Text);
 
             }
         }
