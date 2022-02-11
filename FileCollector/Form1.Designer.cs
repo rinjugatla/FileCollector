@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace WindowsFormsApplication3
+namespace FileCollector
 {
     partial class fomr1
     {

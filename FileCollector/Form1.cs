@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
 
-namespace WindowsFormsApplication3
+namespace FileCollector
 {
     public partial class fomr1 : Form
     {
