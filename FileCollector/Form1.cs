@@ -138,7 +138,7 @@ namespace FileCollector
             var totalTime = (endTime - startTime).TotalMinutes;
             Log_TextBox.AppendText("\r\n----- 統計 -----\r\n");
 
-            Log_TextBox.AppendText($"時間: {totalTime}分\r\n");
+            Log_TextBox.AppendText($"時間: {totalTime:0.00}分\r\n");
             Log_TextBox.AppendText($"対象: {urls.Count}件\r\n");
             Log_TextBox.AppendText($"成功: {successCount}件\r\n");
 
