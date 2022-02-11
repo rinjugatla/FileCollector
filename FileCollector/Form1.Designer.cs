@@ -264,6 +264,11 @@ namespace WindowsFormsApplication3
             // Start_NumericUpDown
             // 
             this.Start_NumericUpDown.Location = new System.Drawing.Point(72, 37);
+            this.Start_NumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.Start_NumericUpDown.Name = "Start_NumericUpDown";
             this.Start_NumericUpDown.Size = new System.Drawing.Size(174, 19);
             this.Start_NumericUpDown.TabIndex = 101;
@@ -271,6 +276,11 @@ namespace WindowsFormsApplication3
             // End_NumericUpDown
             // 
             this.End_NumericUpDown.Location = new System.Drawing.Point(72, 62);
+            this.End_NumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.End_NumericUpDown.Name = "End_NumericUpDown";
             this.End_NumericUpDown.Size = new System.Drawing.Size(174, 19);
             this.End_NumericUpDown.TabIndex = 101;
