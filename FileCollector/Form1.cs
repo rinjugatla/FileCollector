@@ -121,6 +121,7 @@ namespace WindowsFormsApplication3
             Log_TextBox.AppendText("\r\n----- ダウンロード開始 -----\r\n");
             int successCount = 0;
             bool isSaveByExtension = SaveByExtension_CheckBox.Checked;
+            int delayTime = int.Parse(DownloadDelay_NumericUpDown.Text);
             foreach (var url in urls)
             {
                 var result = await DownloadAsync(url, SaveDirectory_TextBox.Text, isSaveByExtension);
@@ -129,7 +130,7 @@ namespace WindowsFormsApplication3
                 var result_text = result ? "成功" : "失敗";
                 var text = $"{url} -> {result_text}";
                 Log_TextBox.AppendText($"{text}\r\n");
-                await Task.Delay(2000);
+                await Task.Delay(delayTime);
             }
 
             // 処理時間
