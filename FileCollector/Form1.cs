@@ -83,11 +83,6 @@ namespace WindowsFormsApplication3
             return true;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Download_Button_Click(object sender, EventArgs e)
         {
             
