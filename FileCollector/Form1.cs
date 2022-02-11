@@ -400,17 +400,8 @@ namespace WindowsFormsApplication3
         /// <param name="e"></param>
         private void OpenSaveDirectory_Button_Click(object sender, EventArgs e)
         {
-            if (SaveDirectory_TextBox.Text == "")
-            {
-                string startup = Application.StartupPath;
-                System.Diagnostics.Process.Start(startup);
-            }
-            else
-            {
-
-                System.Diagnostics.Process.Start(SaveDirectory_TextBox.Text);
-
-            }
+            var directory = SaveDirectory_TextBox.Text == "" ? Application.StartupPath : SaveDirectory_TextBox.Text;
+            System.Diagnostics.Process.Start(directory);
         }
     }
 }
