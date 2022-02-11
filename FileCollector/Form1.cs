@@ -16,14 +16,14 @@ namespace WindowsFormsApplication3
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Clear_Button_Click(object sender, EventArgs e)
         {
             Url_TextBox.Text = "";
             Start_NumericUpDown.Text = "0";
             End_NumericUpDown.Text = "0";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void GenerateUrl_Button_Click(object sender, EventArgs e)
         {
 
 
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Download_Button_Click(object sender, EventArgs e)
         {
             
             System.Threading.Thread t =
@@ -370,7 +370,7 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void SaveDirectoryBrowse_Button_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -380,7 +380,7 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void UrlFileBrowse_Button_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -390,7 +390,7 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void OpenUrlFile_Button_Click(object sender, EventArgs e)
         {
 
             if (SaveDirectory_TextBox.Text == "")
@@ -406,7 +406,7 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void OpenSaveDirectory_Button_Click(object sender, EventArgs e)
         {
             if (SaveDirectory_TextBox.Text == "")
             {

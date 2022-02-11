@@ -103,7 +103,7 @@ namespace WindowsFormsApplication3
             this.Clear_Button.TabIndex = 4;
             this.Clear_Button.Text = "クリア";
             this.Clear_Button.UseVisualStyleBackColor = true;
-            this.Clear_Button.Click += new System.EventHandler(this.button1_Click);
+            this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
             // 
             // GenerateUrl_Button
             // 
@@ -113,7 +113,7 @@ namespace WindowsFormsApplication3
             this.GenerateUrl_Button.TabIndex = 6;
             this.GenerateUrl_Button.Text = "URLlist.txt生成";
             this.GenerateUrl_Button.UseVisualStyleBackColor = true;
-            this.GenerateUrl_Button.Click += new System.EventHandler(this.button4_Click);
+            this.GenerateUrl_Button.Click += new System.EventHandler(this.GenerateUrl_Button_Click);
             // 
             // Download_Button
             // 
@@ -123,7 +123,7 @@ namespace WindowsFormsApplication3
             this.Download_Button.TabIndex = 7;
             this.Download_Button.Text = "DL";
             this.Download_Button.UseVisualStyleBackColor = true;
-            this.Download_Button.Click += new System.EventHandler(this.button5_Click);
+            this.Download_Button.Click += new System.EventHandler(this.Download_Button_Click);
             // 
             // Log_TextBox
             // 
@@ -170,7 +170,7 @@ namespace WindowsFormsApplication3
             this.SaveDirectoryBrowse_Button.TabIndex = 15;
             this.SaveDirectoryBrowse_Button.Text = "参照";
             this.SaveDirectoryBrowse_Button.UseVisualStyleBackColor = true;
-            this.SaveDirectoryBrowse_Button.Click += new System.EventHandler(this.button7_Click);
+            this.SaveDirectoryBrowse_Button.Click += new System.EventHandler(this.SaveDirectoryBrowse_Button_Click);
             // 
             // label7
             // 
@@ -196,7 +196,7 @@ namespace WindowsFormsApplication3
             this.UrlFileBrowse_Button.TabIndex = 12;
             this.UrlFileBrowse_Button.Text = "参照";
             this.UrlFileBrowse_Button.UseVisualStyleBackColor = true;
-            this.UrlFileBrowse_Button.Click += new System.EventHandler(this.button8_Click);
+            this.UrlFileBrowse_Button.Click += new System.EventHandler(this.UrlFileBrowse_Button_Click);
             // 
             // openFileDialog1
             // 
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication3
             this.OpenSaveDirectory_Button.TabIndex = 16;
             this.OpenSaveDirectory_Button.Text = "開く";
             this.OpenSaveDirectory_Button.UseVisualStyleBackColor = true;
-            this.OpenSaveDirectory_Button.Click += new System.EventHandler(this.button10_Click);
+            this.OpenSaveDirectory_Button.Click += new System.EventHandler(this.OpenSaveDirectory_Button_Click);
             // 
             // OpenUrlFile_Button
             // 
@@ -231,7 +231,7 @@ namespace WindowsFormsApplication3
             this.OpenUrlFile_Button.TabIndex = 13;
             this.OpenUrlFile_Button.Text = "開く";
             this.OpenUrlFile_Button.UseVisualStyleBackColor = true;
-            this.OpenUrlFile_Button.Click += new System.EventHandler(this.button9_Click);
+            this.OpenUrlFile_Button.Click += new System.EventHandler(this.OpenUrlFile_Button_Click);
             // 
             // SaveLog_CheckBox
             // 
