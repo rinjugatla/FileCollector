@@ -8,8 +8,8 @@
     <ProjectGuid>{9E7D7637-5876-4A91-BB9D-81C43142563A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication1</RootNamespace>
-    <AssemblyName>WindowsFormsApplication6</AssemblyName>
+    <RootNamespace>FileCollector</RootNamespace>
+    <AssemblyName>FileCollector</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
