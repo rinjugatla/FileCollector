@@ -187,6 +187,7 @@ namespace WindowsFormsApplication3
             this.Start_NumericUpDown.Name = "Start_NumericUpDown";
             this.Start_NumericUpDown.Size = new System.Drawing.Size(174, 19);
             this.Start_NumericUpDown.TabIndex = 101;
+            this.Start_NumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // End_NumericUpDown
             // 
@@ -199,6 +200,7 @@ namespace WindowsFormsApplication3
             this.End_NumericUpDown.Name = "End_NumericUpDown";
             this.End_NumericUpDown.Size = new System.Drawing.Size(174, 19);
             this.End_NumericUpDown.TabIndex = 101;
+            this.End_NumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Format_TextBox
             // 
@@ -241,6 +243,7 @@ namespace WindowsFormsApplication3
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(174, 19);
             this.numericUpDown1.TabIndex = 101;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown1.Value = new decimal(new int[] {
             500,
             0,
