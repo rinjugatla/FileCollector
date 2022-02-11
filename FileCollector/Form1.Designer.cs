@@ -36,7 +36,7 @@ namespace WindowsFormsApplication3
             this.label3 = new System.Windows.Forms.Label();
             this.Url_TextBox = new System.Windows.Forms.TextBox();
             this.Clear_Button = new System.Windows.Forms.Button();
-            this.GenerateUrl_Button = new System.Windows.Forms.Button();
+            this.CheckGenerateUrl_Button = new System.Windows.Forms.Button();
             this.Download_Button = new System.Windows.Forms.Button();
             this.Log_TextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -107,15 +107,15 @@ namespace WindowsFormsApplication3
             this.Clear_Button.UseVisualStyleBackColor = true;
             this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
             // 
-            // GenerateUrl_Button
+            // CheckGenerateUrl_Button
             // 
-            this.GenerateUrl_Button.Location = new System.Drawing.Point(33, 112);
-            this.GenerateUrl_Button.Name = "GenerateUrl_Button";
-            this.GenerateUrl_Button.Size = new System.Drawing.Size(213, 37);
-            this.GenerateUrl_Button.TabIndex = 6;
-            this.GenerateUrl_Button.Text = "URLlist.txt生成";
-            this.GenerateUrl_Button.UseVisualStyleBackColor = true;
-            this.GenerateUrl_Button.Click += new System.EventHandler(this.GenerateUrl_Button_Click);
+            this.CheckGenerateUrl_Button.Location = new System.Drawing.Point(33, 112);
+            this.CheckGenerateUrl_Button.Name = "CheckGenerateUrl_Button";
+            this.CheckGenerateUrl_Button.Size = new System.Drawing.Size(213, 37);
+            this.CheckGenerateUrl_Button.TabIndex = 6;
+            this.CheckGenerateUrl_Button.Text = "連番URLを確認";
+            this.CheckGenerateUrl_Button.UseVisualStyleBackColor = true;
+            this.CheckGenerateUrl_Button.Click += new System.EventHandler(this.CheckGenerateUrl_Button_Click);
             // 
             // Download_Button
             // 
@@ -314,7 +314,7 @@ namespace WindowsFormsApplication3
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Log_TextBox);
             this.Controls.Add(this.Download_Button);
-            this.Controls.Add(this.GenerateUrl_Button);
+            this.Controls.Add(this.CheckGenerateUrl_Button);
             this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Url_TextBox);
             this.Controls.Add(this.label5);
@@ -339,7 +339,7 @@ namespace WindowsFormsApplication3
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Url_TextBox;
         private System.Windows.Forms.Button Clear_Button;
-        private System.Windows.Forms.Button GenerateUrl_Button;
+        private System.Windows.Forms.Button CheckGenerateUrl_Button;
         private System.Windows.Forms.Button Download_Button;
         private TextBox Log_TextBox;
         private Label label4;

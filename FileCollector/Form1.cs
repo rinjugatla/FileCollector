@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Text;
+using System.Collections.Generic;
 
 namespace WindowsFormsApplication3
 {
@@ -23,51 +24,63 @@ namespace WindowsFormsApplication3
             End_NumericUpDown.Text = "0";
         }
 
-        private void GenerateUrl_Button_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 生成されるURLを確認
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckGenerateUrl_Button_Click(object sender, EventArgs e)
         {
+            var urls = GenerateUrl();
 
+            var header = "\r\n----- URL確認 -----\r\n";
+            var sb = new StringBuilder($"{header}{urls.Count}件のURLを生成\r\n");
+            sb.AppendLine(string.Join("\r\n", urls));
+            Log_TextBox.AppendText(sb.ToString());
+        }
 
-            if ((Url_TextBox.Text.Length != 0) || (Start_NumericUpDown.Text.Length != 0) || (Url_TextBox.Text.Length != 0))
+        /// <summary>
+        /// URLを作成
+        /// </summary>
+        /// <returns>連番URL</returns>
+        private List<string> GenerateUrl()
+        {
+            if (!IsValidBaseUrl()) { return new List<string>(); }
+
+            int start = int.Parse(Start_NumericUpDown.Text);
+            int end = int.Parse(End_NumericUpDown.Text);
+            if (start > end) { (start, end) = (end, start); }
+
+            var baseUrl = Url_TextBox.Text;
+            var format = Format_TextBox.Text;
+            var urls = new List<string>();
+            for (int i = start; i < end + 1; i++)
             {
-
-                int n;
-
-                //ファイル作成
-                System.IO.StreamWriter sw =
-                new System.IO.StreamWriter("URL-list.txt",
-                false,
-                System.Text.Encoding.GetEncoding(932));
-
-                if (int.Parse(Start_NumericUpDown.Text) < int.Parse(End_NumericUpDown.Text))
-                {
-
-                    for (n = int.Parse(Start_NumericUpDown.Text); n <= int.Parse(End_NumericUpDown.Text); n++)
-                    {
-
-                        //ファイルに書き出し
-                        sw.WriteLine(Url_TextBox.Text + n + "/");
-
-                    }
-
-                    //sw.Close();
-                    sw.Dispose();
-
-                }
-                else
-                {
-
-                    MessageBox.Show("開始値が終了値よりも大きく設定されています。", "エラー");
-
-                }
-
-            }
-            else
-            {
-
-                MessageBox.Show("URL, 開始値, 終了値を確認してください。", "エラー");
-
+                var url = baseUrl.Replace(":num:", i.ToString(format));
+                urls.Add(url);
             }
 
+            return urls;
+        }
+
+        /// <summary>
+        /// 基本のURLが有効か判定
+        /// </summary>
+        /// <returns></returns>
+        private bool IsValidBaseUrl()
+        {
+            if (Url_TextBox.Text.Length == 0)
+            {
+                MessageBox.Show("URLを指定してください。");
+                return false;
+            }
+            else if (!Regex.IsMatch(Url_TextBox.Text, "^https?://"))
+            {
+                MessageBox.Show("URLはhttp://またはhttps://から指定してください。");
+                return false;
+            }
+
+            return true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -89,7 +102,7 @@ namespace WindowsFormsApplication3
         {
 
             Clear_Button.Enabled = false;
-            GenerateUrl_Button.Enabled = false;
+            CheckGenerateUrl_Button.Enabled = false;
             Download_Button.Enabled = false;
             SaveDirectoryBrowse_Button.Enabled = false;
             UrlFileBrowse_Button.Enabled = false;
@@ -359,7 +372,7 @@ namespace WindowsFormsApplication3
             if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "\r\n-----終了-----\r\n" + "\r\n");
 
             Clear_Button.Enabled = true;
-            GenerateUrl_Button.Enabled = true;
+            CheckGenerateUrl_Button.Enabled = true;
             Download_Button.Enabled = true;
             SaveDirectoryBrowse_Button.Enabled = true;
             UrlFileBrowse_Button.Enabled = true;
