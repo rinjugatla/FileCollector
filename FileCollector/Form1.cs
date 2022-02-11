@@ -104,16 +104,25 @@ namespace WindowsFormsApplication3
         }
 
         /// <summary>
+        /// コントロールの有効状態を切替
+        /// </summary>
+        /// <param name="isEnabled"></param>
+        private void SwitchEnabledControls(bool isEnabled) 
+        {
+            Clear_Button.Enabled = isEnabled;
+            CheckGenerateUrl_Button.Enabled = isEnabled;
+            Download_Button.Enabled = isEnabled;
+            SaveDirectoryBrowse_Button.Enabled = isEnabled;
+            OpenSaveDirectory_Button.Enabled = isEnabled;
+        }
+
+        /// <summary>
         /// 連番ファイルをダウンロード
         /// </summary>
         public void LDownload()
         {
-
-            Clear_Button.Enabled = false;
-            CheckGenerateUrl_Button.Enabled = false;
-            Download_Button.Enabled = false;
-            SaveDirectoryBrowse_Button.Enabled = false;
-            OpenSaveDirectory_Button.Enabled = false;
+            SwitchEnabledControls(false);
+            
 
             string URLlistFile = "";
 
@@ -364,11 +373,7 @@ namespace WindowsFormsApplication3
                 "\r\n" + "DL時間" + TotaltimeMin.ToString() + "分" + TotaltimeSecond.ToString() + "秒");
             if (SaveLog_CheckBox.Checked) System.IO.File.AppendAllText("log.txt", "\r\n-----終了-----\r\n" + "\r\n");
 
-            Clear_Button.Enabled = true;
-            CheckGenerateUrl_Button.Enabled = true;
-            Download_Button.Enabled = true;
-            SaveDirectoryBrowse_Button.Enabled = true;
-            OpenSaveDirectory_Button.Enabled = true;
+            SwitchEnabledControls(true);
 
             return;
 
