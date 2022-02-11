@@ -30,7 +30,6 @@ namespace WindowsFormsApplication3
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@ namespace WindowsFormsApplication3
             this.SaveDirectoryBrowse_Button = new System.Windows.Forms.Button();
             this.SaveByExtension_CheckBox = new System.Windows.Forms.CheckBox();
             this.OpenSaveDirectory_Button = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SaveLog_CheckBox = new System.Windows.Forms.CheckBox();
             this.Extension_ComboBox = new System.Windows.Forms.ComboBox();
             this.Start_NumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -307,7 +305,6 @@ namespace WindowsFormsApplication3
         private Button SaveDirectoryBrowse_Button;
         private CheckBox SaveByExtension_CheckBox;
         private Button OpenSaveDirectory_Button;
-        private Timer timer1;
         private CheckBox SaveLog_CheckBox;
         private ComboBox Extension_ComboBox;
         private NumericUpDown Start_NumericUpDown;
