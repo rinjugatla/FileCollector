@@ -17,6 +17,11 @@ namespace WindowsFormsApplication3
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 初期化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Clear_Button_Click(object sender, EventArgs e)
         {
             Url_TextBox.Text = "";
@@ -83,6 +88,11 @@ namespace WindowsFormsApplication3
             return true;
         }
 
+        /// <summary>
+        /// ダウンロードを開始
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Download_Button_Click(object sender, EventArgs e)
         {
             
@@ -93,6 +103,9 @@ namespace WindowsFormsApplication3
 
         }
 
+        /// <summary>
+        /// 連番ファイルをダウンロード
+        /// </summary>
         public void LDownload()
         {
 
@@ -378,6 +391,11 @@ namespace WindowsFormsApplication3
 
         }
 
+        /// <summary>
+        /// ファイル保存先フォルダを指定
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveDirectoryBrowse_Button_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -388,6 +406,11 @@ namespace WindowsFormsApplication3
 
         }
 
+        /// <summary>
+        /// URLファイルの場所を指定
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UrlFileBrowse_Button_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -398,6 +421,11 @@ namespace WindowsFormsApplication3
 
         }
 
+        /// <summary>
+        /// URLファイルを開く
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenUrlFile_Button_Click(object sender, EventArgs e)
         {
 
@@ -414,6 +442,11 @@ namespace WindowsFormsApplication3
 
         }
 
+        /// <summary>
+        /// 保存先フォルダを開く
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenSaveDirectory_Button_Click(object sender, EventArgs e)
         {
             if (SaveDirectory_TextBox.Text == "")
