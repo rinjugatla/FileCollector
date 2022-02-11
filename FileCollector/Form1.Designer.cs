@@ -47,8 +47,11 @@ namespace WindowsFormsApplication3
             this.End_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Format_TextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +91,7 @@ namespace WindowsFormsApplication3
             // 
             // Clear_Button
             // 
-            this.Clear_Button.Location = new System.Drawing.Point(165, 155);
+            this.Clear_Button.Location = new System.Drawing.Point(165, 180);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(81, 37);
             this.Clear_Button.TabIndex = 4;
@@ -98,7 +101,7 @@ namespace WindowsFormsApplication3
             // 
             // CheckGenerateUrl_Button
             // 
-            this.CheckGenerateUrl_Button.Location = new System.Drawing.Point(13, 112);
+            this.CheckGenerateUrl_Button.Location = new System.Drawing.Point(13, 137);
             this.CheckGenerateUrl_Button.Name = "CheckGenerateUrl_Button";
             this.CheckGenerateUrl_Button.Size = new System.Drawing.Size(233, 37);
             this.CheckGenerateUrl_Button.TabIndex = 6;
@@ -108,7 +111,7 @@ namespace WindowsFormsApplication3
             // 
             // Download_Button
             // 
-            this.Download_Button.Location = new System.Drawing.Point(13, 155);
+            this.Download_Button.Location = new System.Drawing.Point(13, 180);
             this.Download_Button.Name = "Download_Button";
             this.Download_Button.Size = new System.Drawing.Size(146, 37);
             this.Download_Button.TabIndex = 7;
@@ -123,14 +126,14 @@ namespace WindowsFormsApplication3
             this.Log_TextBox.Name = "Log_TextBox";
             this.Log_TextBox.ReadOnly = true;
             this.Log_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Log_TextBox.Size = new System.Drawing.Size(400, 180);
+            this.Log_TextBox.Size = new System.Drawing.Size(400, 207);
             this.Log_TextBox.TabIndex = 9;
             this.Log_TextBox.TabStop = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 201);
+            this.label6.Location = new System.Drawing.Point(11, 230);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 14;
@@ -138,14 +141,14 @@ namespace WindowsFormsApplication3
             // 
             // SaveDirectory_TextBox
             // 
-            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(59, 198);
+            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(58, 227);
             this.SaveDirectory_TextBox.Name = "SaveDirectory_TextBox";
             this.SaveDirectory_TextBox.Size = new System.Drawing.Size(365, 19);
             this.SaveDirectory_TextBox.TabIndex = 14;
             // 
             // SaveDirectoryBrowse_Button
             // 
-            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(430, 197);
+            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(429, 226);
             this.SaveDirectoryBrowse_Button.Name = "SaveDirectoryBrowse_Button";
             this.SaveDirectoryBrowse_Button.Size = new System.Drawing.Size(53, 21);
             this.SaveDirectoryBrowse_Button.TabIndex = 15;
@@ -156,7 +159,7 @@ namespace WindowsFormsApplication3
             // SaveByExtension_CheckBox
             // 
             this.SaveByExtension_CheckBox.AutoSize = true;
-            this.SaveByExtension_CheckBox.Location = new System.Drawing.Point(547, 200);
+            this.SaveByExtension_CheckBox.Location = new System.Drawing.Point(546, 229);
             this.SaveByExtension_CheckBox.Name = "SaveByExtension_CheckBox";
             this.SaveByExtension_CheckBox.Size = new System.Drawing.Size(105, 16);
             this.SaveByExtension_CheckBox.TabIndex = 9;
@@ -165,7 +168,7 @@ namespace WindowsFormsApplication3
             // 
             // OpenSaveDirectory_Button
             // 
-            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(489, 197);
+            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(488, 226);
             this.OpenSaveDirectory_Button.Name = "OpenSaveDirectory_Button";
             this.OpenSaveDirectory_Button.Size = new System.Drawing.Size(52, 21);
             this.OpenSaveDirectory_Button.TabIndex = 16;
@@ -213,13 +216,45 @@ namespace WindowsFormsApplication3
             this.label5.TabIndex = 2;
             this.label5.Text = "フォーマット";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "待機時間";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(72, 112);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(174, 19);
+            this.numericUpDown1.TabIndex = 101;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            // 
             // fomr1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 226);
+            this.ClientSize = new System.Drawing.Size(664, 258);
             this.Controls.Add(this.Format_TextBox);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.End_NumericUpDown);
             this.Controls.Add(this.Start_NumericUpDown);
             this.Controls.Add(this.OpenSaveDirectory_Button);
@@ -232,6 +267,7 @@ namespace WindowsFormsApplication3
             this.Controls.Add(this.CheckGenerateUrl_Button);
             this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Url_TextBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -242,6 +278,7 @@ namespace WindowsFormsApplication3
             this.Text = "役立たずの画像収集機 ver.1.10";
             ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,6 +303,8 @@ namespace WindowsFormsApplication3
         private NumericUpDown End_NumericUpDown;
         private TextBox Format_TextBox;
         private Label label5;
+        private Label label4;
+        private NumericUpDown numericUpDown1;
     }
 }
 
