@@ -16,16 +16,6 @@ namespace WindowsFormsApplication3
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Url_TextBox.Text = "";
@@ -380,11 +370,6 @@ namespace WindowsFormsApplication3
 
         }
 
-        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
-        {
-
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -402,11 +387,6 @@ namespace WindowsFormsApplication3
                 //URL-list.txtファイルの場所
                 UrlFilePath_TextBox.Text += (openFileDialog1.FileName);
             }
-
-        }
-
-        private void fomr1_Load(object sender, EventArgs e)
-        {
 
         }
 

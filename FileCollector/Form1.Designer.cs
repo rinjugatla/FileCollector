@@ -68,7 +68,6 @@ namespace WindowsFormsApplication3
             this.label1.Size = new System.Drawing.Size(27, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "URL";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -87,7 +86,6 @@ namespace WindowsFormsApplication3
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 2;
             this.label3.Text = "終了値";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Url_TextBox
             // 
@@ -163,10 +161,6 @@ namespace WindowsFormsApplication3
             this.SaveDirectory_TextBox.Name = "SaveDirectory_TextBox";
             this.SaveDirectory_TextBox.Size = new System.Drawing.Size(300, 19);
             this.SaveDirectory_TextBox.TabIndex = 14;
-            // 
-            // folderBrowserDialog1
-            // 
-            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
             // SaveDirectoryBrowse_Button
             // 
@@ -310,7 +304,6 @@ namespace WindowsFormsApplication3
             this.MaximizeBox = false;
             this.Name = "fomr1";
             this.Text = "役立たずの画像収集機 ver.1.10";
-            this.Load += new System.EventHandler(this.fomr1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).EndInit();
             this.ResumeLayout(false);
