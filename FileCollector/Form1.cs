@@ -120,9 +120,10 @@ namespace WindowsFormsApplication3
 
             Log_TextBox.AppendText("\r\n----- ダウンロード開始 -----\r\n");
             int successCount = 0;
+            bool isSaveByExtension = SaveByExtension_CheckBox.Checked;
             foreach (var url in urls)
             {
-                var result = await DownloadAsync(url, SaveDirectory_TextBox.Text);
+                var result = await DownloadAsync(url, SaveDirectory_TextBox.Text, isSaveByExtension);
                 if (result) { successCount += 1; }
 
                 var result_text = result ? "成功" : "失敗";
@@ -168,23 +169,22 @@ namespace WindowsFormsApplication3
         /// </remarks>
         /// <param name="url">ダウンロード対象</param>
         /// <param name="saveDirectory">保存先フォルダ</param>
+        /// <param name="isSaveByExtension">拡張子毎にフォルダを分けるか</param>
         /// <returns></returns>
-        private async Task<bool> DownloadAsync(string url, string saveDirectory)
+        private async Task<bool> DownloadAsync(string url, string saveDirectory, bool isSaveByExtension)
         {
             if(url == null || url.Length == 0) { return false; }
             if (saveDirectory == null || saveDirectory.Length == 0) { return false; }
 
-            string fixedSaveDirectory = saveDirectory;
-            if (!saveDirectory.EndsWith("\\")) { fixedSaveDirectory = saveDirectory + "\\"; }
-            if (!Directory.Exists(fixedSaveDirectory)) { Directory.CreateDirectory(fixedSaveDirectory); }
+            // 保存先ファイル
+            string savePath = CreateSavePath(url, saveDirectory, isSaveByExtension);
 
             using (var request = new HttpRequestMessage(HttpMethod.Get, new Uri(url)))
             using (var response = await httpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead))
             {
                 if (response.StatusCode != HttpStatusCode.OK) { return false; }
                 
-                string filename = Path.GetFileName(url);
-                string savePath = $"{fixedSaveDirectory}{filename}";
+                
                 using (var content = response.Content)
                 using (var stream = await content.ReadAsStreamAsync())
                 using (var fileStream = new FileStream(savePath, FileMode.Create, FileAccess.Write, FileShare.None))
@@ -194,6 +194,28 @@ namespace WindowsFormsApplication3
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// ファイルの保存先パスを作成
+        /// </summary>
+        /// <param name="url">ダウンロード対象</param>
+        /// <param name="saveDirectory">保存先フォルダ</param>
+        /// <param name="isSaveByExtension">拡張子毎にフォルダを分けるか</param>
+        /// <returns></returns>
+        private string CreateSavePath(string url, string saveDirectory, bool isSaveByExtension)
+        {
+            string filename = Path.GetFileName(url);
+            // ピリオドを抜いた拡張子を取得
+            string extension = Path.GetExtension(url).Remove(0, 1);
+            string fixedSaveDirectory = saveDirectory;
+            if (!saveDirectory.EndsWith("\\")) { fixedSaveDirectory = $"{saveDirectory}\\"; }
+            if (isSaveByExtension) { fixedSaveDirectory += $"{extension}\\"; }
+
+            if (!Directory.Exists(fixedSaveDirectory)) { Directory.CreateDirectory(fixedSaveDirectory); }
+
+            string result = $"{fixedSaveDirectory}{filename}";
+            return result;
         }
 
         /// <summary>
