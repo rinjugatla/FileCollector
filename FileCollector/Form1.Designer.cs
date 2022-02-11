@@ -30,6 +30,7 @@ namespace FileCollector
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@ namespace FileCollector
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DownloadDelay_NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Start_NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DownloadDelay_NumericUpDown)).BeginInit();
@@ -88,6 +90,7 @@ namespace FileCollector
             this.Url_TextBox.Name = "Url_TextBox";
             this.Url_TextBox.Size = new System.Drawing.Size(174, 19);
             this.Url_TextBox.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.Url_TextBox, ":num:を連番として置き換え");
             // 
             // Clear_Button
             // 
@@ -308,6 +311,7 @@ namespace FileCollector
         private Label label5;
         private Label label4;
         private NumericUpDown DownloadDelay_NumericUpDown;
+        private ToolTip toolTip1;
     }
 }
 
