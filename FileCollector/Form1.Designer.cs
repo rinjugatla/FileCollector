@@ -38,14 +38,11 @@ namespace WindowsFormsApplication3
             this.CheckGenerateUrl_Button = new System.Windows.Forms.Button();
             this.Download_Button = new System.Windows.Forms.Button();
             this.Log_TextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SaveDirectory_TextBox = new System.Windows.Forms.TextBox();
             this.SaveDirectoryBrowse_Button = new System.Windows.Forms.Button();
             this.SaveByExtension_CheckBox = new System.Windows.Forms.CheckBox();
             this.OpenSaveDirectory_Button = new System.Windows.Forms.Button();
-            this.SaveLog_CheckBox = new System.Windows.Forms.CheckBox();
-            this.Extension_ComboBox = new System.Windows.Forms.ComboBox();
             this.Start_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.End_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Format_TextBox = new System.Windows.Forms.TextBox();
@@ -130,20 +127,10 @@ namespace WindowsFormsApplication3
             this.Log_TextBox.TabIndex = 9;
             this.Log_TextBox.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(510, 12);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "-------------------------------------option--------------------------------------" +
-    "----";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(70, 239);
+            this.label6.Location = new System.Drawing.Point(12, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 14;
@@ -151,14 +138,14 @@ namespace WindowsFormsApplication3
             // 
             // SaveDirectory_TextBox
             // 
-            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(165, 236);
+            this.SaveDirectory_TextBox.Location = new System.Drawing.Point(59, 198);
             this.SaveDirectory_TextBox.Name = "SaveDirectory_TextBox";
-            this.SaveDirectory_TextBox.Size = new System.Drawing.Size(300, 19);
+            this.SaveDirectory_TextBox.Size = new System.Drawing.Size(365, 19);
             this.SaveDirectory_TextBox.TabIndex = 14;
             // 
             // SaveDirectoryBrowse_Button
             // 
-            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(471, 234);
+            this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(430, 197);
             this.SaveDirectoryBrowse_Button.Name = "SaveDirectoryBrowse_Button";
             this.SaveDirectoryBrowse_Button.Size = new System.Drawing.Size(53, 21);
             this.SaveDirectoryBrowse_Button.TabIndex = 15;
@@ -169,7 +156,7 @@ namespace WindowsFormsApplication3
             // SaveByExtension_CheckBox
             // 
             this.SaveByExtension_CheckBox.AutoSize = true;
-            this.SaveByExtension_CheckBox.Location = new System.Drawing.Point(72, 210);
+            this.SaveByExtension_CheckBox.Location = new System.Drawing.Point(547, 200);
             this.SaveByExtension_CheckBox.Name = "SaveByExtension_CheckBox";
             this.SaveByExtension_CheckBox.Size = new System.Drawing.Size(105, 16);
             this.SaveByExtension_CheckBox.TabIndex = 9;
@@ -178,39 +165,13 @@ namespace WindowsFormsApplication3
             // 
             // OpenSaveDirectory_Button
             // 
-            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(530, 234);
+            this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(489, 197);
             this.OpenSaveDirectory_Button.Name = "OpenSaveDirectory_Button";
             this.OpenSaveDirectory_Button.Size = new System.Drawing.Size(52, 21);
             this.OpenSaveDirectory_Button.TabIndex = 16;
             this.OpenSaveDirectory_Button.Text = "開く";
             this.OpenSaveDirectory_Button.UseVisualStyleBackColor = true;
             this.OpenSaveDirectory_Button.Click += new System.EventHandler(this.OpenSaveDirectory_Button_Click);
-            // 
-            // SaveLog_CheckBox
-            // 
-            this.SaveLog_CheckBox.AutoSize = true;
-            this.SaveLog_CheckBox.Checked = true;
-            this.SaveLog_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SaveLog_CheckBox.Location = new System.Drawing.Point(183, 210);
-            this.SaveLog_CheckBox.Name = "SaveLog_CheckBox";
-            this.SaveLog_CheckBox.Size = new System.Drawing.Size(63, 16);
-            this.SaveLog_CheckBox.TabIndex = 10;
-            this.SaveLog_CheckBox.Text = "log保存";
-            this.SaveLog_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // Extension_ComboBox
-            // 
-            this.Extension_ComboBox.FormattingEnabled = true;
-            this.Extension_ComboBox.Items.AddRange(new object[] {
-            "jpeg,jpg,gif,png",
-            "wma,mp3,acc",
-            "avi,wmv,mp4,divx"});
-            this.Extension_ComboBox.Location = new System.Drawing.Point(252, 208);
-            this.Extension_ComboBox.Name = "Extension_ComboBox";
-            this.Extension_ComboBox.Size = new System.Drawing.Size(330, 20);
-            this.Extension_ComboBox.TabIndex = 100;
-            this.Extension_ComboBox.TabStop = false;
-            this.Extension_ComboBox.Text = "保存拡張子(実装予定)";
             // 
             // Start_NumericUpDown
             // 
@@ -257,18 +218,15 @@ namespace WindowsFormsApplication3
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 267);
+            this.ClientSize = new System.Drawing.Size(664, 226);
             this.Controls.Add(this.Format_TextBox);
             this.Controls.Add(this.End_NumericUpDown);
             this.Controls.Add(this.Start_NumericUpDown);
-            this.Controls.Add(this.Extension_ComboBox);
-            this.Controls.Add(this.SaveLog_CheckBox);
             this.Controls.Add(this.OpenSaveDirectory_Button);
             this.Controls.Add(this.SaveByExtension_CheckBox);
             this.Controls.Add(this.SaveDirectoryBrowse_Button);
             this.Controls.Add(this.SaveDirectory_TextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.Log_TextBox);
             this.Controls.Add(this.Download_Button);
             this.Controls.Add(this.CheckGenerateUrl_Button);
@@ -299,14 +257,11 @@ namespace WindowsFormsApplication3
         private System.Windows.Forms.Button CheckGenerateUrl_Button;
         private System.Windows.Forms.Button Download_Button;
         private TextBox Log_TextBox;
-        private Label label4;
         private Label label6;
         private TextBox SaveDirectory_TextBox;
         private Button SaveDirectoryBrowse_Button;
         private CheckBox SaveByExtension_CheckBox;
         private Button OpenSaveDirectory_Button;
-        private CheckBox SaveLog_CheckBox;
-        private ComboBox Extension_ComboBox;
         private NumericUpDown Start_NumericUpDown;
         private NumericUpDown End_NumericUpDown;
         private TextBox Format_TextBox;
