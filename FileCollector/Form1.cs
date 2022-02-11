@@ -162,6 +162,10 @@ namespace WindowsFormsApplication3
         /// <summary>
         /// 非同期でファイルをダウンロード
         /// </summary>
+        /// <remarks>
+        /// .NETのHttpClientでメモリに優しく、でかいファイルをダウンロードする
+        /// https://qiita.com/thrzn41/items/2754bec8ebad97ecd7fd
+        /// </remarks>
         /// <param name="url">ダウンロード対象</param>
         /// <param name="saveDirectory">保存先フォルダ</param>
         /// <returns></returns>
