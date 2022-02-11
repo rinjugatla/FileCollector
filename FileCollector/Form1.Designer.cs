@@ -97,7 +97,7 @@ namespace FileCollector
             this.Clear_Button.Location = new System.Drawing.Point(165, 180);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(81, 37);
-            this.Clear_Button.TabIndex = 4;
+            this.Clear_Button.TabIndex = 8;
             this.Clear_Button.Text = "クリア";
             this.Clear_Button.UseVisualStyleBackColor = true;
             this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
@@ -147,14 +147,14 @@ namespace FileCollector
             this.SaveDirectory_TextBox.Location = new System.Drawing.Point(58, 227);
             this.SaveDirectory_TextBox.Name = "SaveDirectory_TextBox";
             this.SaveDirectory_TextBox.Size = new System.Drawing.Size(365, 19);
-            this.SaveDirectory_TextBox.TabIndex = 14;
+            this.SaveDirectory_TextBox.TabIndex = 9;
             // 
             // SaveDirectoryBrowse_Button
             // 
             this.SaveDirectoryBrowse_Button.Location = new System.Drawing.Point(429, 226);
             this.SaveDirectoryBrowse_Button.Name = "SaveDirectoryBrowse_Button";
             this.SaveDirectoryBrowse_Button.Size = new System.Drawing.Size(53, 21);
-            this.SaveDirectoryBrowse_Button.TabIndex = 15;
+            this.SaveDirectoryBrowse_Button.TabIndex = 10;
             this.SaveDirectoryBrowse_Button.Text = "参照";
             this.SaveDirectoryBrowse_Button.UseVisualStyleBackColor = true;
             this.SaveDirectoryBrowse_Button.Click += new System.EventHandler(this.SaveDirectoryBrowse_Button_Click);
@@ -165,7 +165,7 @@ namespace FileCollector
             this.SaveByExtension_CheckBox.Location = new System.Drawing.Point(546, 229);
             this.SaveByExtension_CheckBox.Name = "SaveByExtension_CheckBox";
             this.SaveByExtension_CheckBox.Size = new System.Drawing.Size(105, 16);
-            this.SaveByExtension_CheckBox.TabIndex = 9;
+            this.SaveByExtension_CheckBox.TabIndex = 12;
             this.SaveByExtension_CheckBox.Text = "拡張子別に保存";
             this.SaveByExtension_CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +174,7 @@ namespace FileCollector
             this.OpenSaveDirectory_Button.Location = new System.Drawing.Point(488, 226);
             this.OpenSaveDirectory_Button.Name = "OpenSaveDirectory_Button";
             this.OpenSaveDirectory_Button.Size = new System.Drawing.Size(52, 21);
-            this.OpenSaveDirectory_Button.TabIndex = 16;
+            this.OpenSaveDirectory_Button.TabIndex = 11;
             this.OpenSaveDirectory_Button.Text = "開く";
             this.OpenSaveDirectory_Button.UseVisualStyleBackColor = true;
             this.OpenSaveDirectory_Button.Click += new System.EventHandler(this.OpenSaveDirectory_Button_Click);
@@ -189,7 +189,7 @@ namespace FileCollector
             0});
             this.Start_NumericUpDown.Name = "Start_NumericUpDown";
             this.Start_NumericUpDown.Size = new System.Drawing.Size(174, 19);
-            this.Start_NumericUpDown.TabIndex = 101;
+            this.Start_NumericUpDown.TabIndex = 2;
             this.Start_NumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // End_NumericUpDown
@@ -202,7 +202,7 @@ namespace FileCollector
             0});
             this.End_NumericUpDown.Name = "End_NumericUpDown";
             this.End_NumericUpDown.Size = new System.Drawing.Size(174, 19);
-            this.End_NumericUpDown.TabIndex = 101;
+            this.End_NumericUpDown.TabIndex = 3;
             this.End_NumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Format_TextBox
@@ -210,7 +210,7 @@ namespace FileCollector
             this.Format_TextBox.Location = new System.Drawing.Point(72, 87);
             this.Format_TextBox.Name = "Format_TextBox";
             this.Format_TextBox.Size = new System.Drawing.Size(174, 19);
-            this.Format_TextBox.TabIndex = 102;
+            this.Format_TextBox.TabIndex = 4;
             // 
             // label5
             // 
@@ -245,7 +245,7 @@ namespace FileCollector
             0});
             this.DownloadDelay_NumericUpDown.Name = "DownloadDelay_NumericUpDown";
             this.DownloadDelay_NumericUpDown.Size = new System.Drawing.Size(174, 19);
-            this.DownloadDelay_NumericUpDown.TabIndex = 101;
+            this.DownloadDelay_NumericUpDown.TabIndex = 5;
             this.DownloadDelay_NumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.DownloadDelay_NumericUpDown.Value = new decimal(new int[] {
             500,
